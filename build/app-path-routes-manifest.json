@@ -1,0 +1,14 @@
+{
+  "/(home)/page": "/",
+  "/_not-found/page": "/_not-found",
+  "/buy-primary/page": "/buy-primary",
+  "/buy-secondary/page": "/buy-secondary",
+  "/buy-suburban/page": "/buy-suburban",
+  "/career/page": "/career",
+  "/case/page": "/case",
+  "/commercial-residence/page": "/commercial-residence",
+  "/rent-residence/page": "/rent-residence",
+  "/robots.txt/route": "/robots.txt",
+  "/sell-residence/page": "/sell-residence",
+  "/sitemap.xml/route": "/sitemap.xml"
+}

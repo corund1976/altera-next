@@ -1,0 +1,20 @@
+{
+  "pages": {
+    "/career/page": [
+      "static/chunks/66bfa76102be5e1b.js",
+      "static/chunks/3b512b42819ed884.js",
+      "static/chunks/01dd79b614dabd34.js",
+      "static/chunks/7dd66bdf8a7e5707.js",
+      "static/chunks/deb6b81cf51dc5e4.css",
+      "static/chunks/373e5f26fef1580c.css",
+      "static/chunks/b29dc89c84dac246.js",
+      "static/chunks/f84d29cb81ea13a9.js",
+      "static/chunks/520d1bca96e1cb69.css",
+      "static/chunks/3eba6931cad880e3.js",
+      "static/chunks/47f477e3d2ef265b.js",
+      "static/chunks/202abb9aed9e828b.js",
+      "static/chunks/0656f51f27ce398d.js",
+      "static/chunks/turbopack-10f1ad5ea44cfaeb.js"
+    ]
+  }
+}
