@@ -8,7 +8,7 @@ const nextConfig = (phase = '') => {
 
   const nextConfigOptions = {
     reactStrictMode: true,
-    distDir: 'build',
+    // distDir: 'build',
     turbopack: {
       rules: {
         // Rule for SVG as React Component
