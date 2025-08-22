@@ -1,0 +1,15 @@
+.container {
+  padding: 0;
+}
+@media screen and (min-width: 375px) {
+  .container {
+    padding-left: calc((100% - 375px) / 2 + 10px);
+    padding-right: calc((100% - 375px) / 2 + 10px);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    padding-left: calc((100% - 1440px) / 2 + 20px);
+    padding-right: calc((100% - 1440px) / 2 + 20px);
+  }
+}

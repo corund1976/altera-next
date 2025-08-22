@@ -1,0 +1,103 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 10;
+
+  display: flex;
+  justify-content: center;
+
+  background-color: rgba(12, 13, 14, 0.6);
+
+  opacity: 0;
+  visibility: hidden;
+
+  overflow-y: hidden;
+  overflow-x: hidden;
+
+  pointer-events: none;
+
+  transition:
+    opacity var(--trans-time) var(--trans-func),
+    visibility var(--trans-time) var(--trans-func);
+
+  /* Скрываем scrollbar для IE, Edge и Firefox */
+  -ms-overflow-style: none; /* IE и Edge */
+  scrollbar-width: 0; /* Firefox */
+}
+
+/* Скрываем scrollbar для Chrome, Safari и Opera */
+.backdrop::-webkit-scrollbar {
+  display: none;
+}
+
+.backdrop_active {
+  composes: backdrop;
+
+  opacity: 1;
+  visibility: visible;
+
+  pointer-events: all;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 24px 24px 0px 0px;
+  background-color: var(--white, #fff);
+
+  padding: 24px 16px;
+
+  width: 100%;
+
+  margin-top: auto;
+
+  transform: translateY(100%);
+
+  transition: transform var(--trans-time) var(--trans-func);
+
+  position: relative;
+}
+
+.modal_active {
+  composes: modal;
+
+  transform: translateY(0);
+}
+
+.btn_close {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+  background-color: transparent;
+
+  color: var(--white);
+
+  width: 40px;
+  height: 40px;
+
+  transition: color var(--trans-time) var(--trans-func);
+}
+
+.btn_close:hover {
+  color: var(--blue);
+}
+
+.btn_close > svg {
+  fill: currentColor;
+
+  width: 24px;
+  height: 24px;
+}

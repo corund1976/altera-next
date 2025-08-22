@@ -1,0 +1,203 @@
+.section {
+  background-color: #2e2e2e;
+}
+
+.block {
+  border-radius: 10px;
+  background-color: #eee;
+  padding: 48px 10px;
+}
+@media screen and (min-width: 1440px) {
+  .block {
+    padding: 90px 20px 90px 570px;
+
+    position: relative;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .block::after {
+    content: '';
+    position: absolute;
+    top: 180px;
+    bottom: 90px;
+    left: 20px;
+
+    width: 510px;
+
+    border-radius: 10px;
+    background-color: #d9d9d9;
+    background-image: url('@/images/commercial/sectionB/image-dsk.webp');
+  }
+}
+
+.title {
+  color: #0c0b1c;
+
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1;
+
+  text-transform: uppercase;
+
+  margin-bottom: 16px;
+}
+@media screen and (min-width: 1440px) {
+  .title {
+    font-size: 50px;
+
+    margin-bottom: 40px;
+  }
+}
+
+.text {
+  color: #0c0b1c;
+
+  font-size: 16px;
+  font-weight: 300;
+  line-height: normal;
+
+  margin-bottom: 24px;
+}
+@media screen and (min-width: 1440px) {
+  .text {
+    font-size: 30px;
+
+    margin-bottom: 40px;
+  }
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -10px;
+}
+@media screen and (min-width: 1440px) {
+  .list {
+    flex-direction: column;
+    margin-top: -40px;
+    margin-left: -64px;
+
+    height: 504px;
+    margin-right: 80px;
+  }
+}
+
+.list > li {
+  flex-basis: 100%;
+  margin-top: 10px;
+}
+@media screen and (min-width: 1440px) {
+  .list > li {
+    flex-basis: calc(100% / 2 - 64px);
+    width: calc(100% / 2 - 64px);
+    flex-shrink: 0;
+    margin-top: 40px;
+    margin-left: 64px;
+    min-height: 212px;
+  }
+}
+
+.text > span {
+  color: #005df3;
+}
+
+.label {
+  padding-top: 20px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1440px) {
+  .label {
+    padding-top: unset;
+    margin-bottom: 24px;
+  }
+}
+
+.label > img {
+  height: 100%;
+}
+
+.desc {
+  color: #000;
+
+  font-size: 16px;
+  font-weight: 300;
+  line-height: normal;
+}
+@media screen and (min-width: 1440px) {
+  .desc {
+    font-size: 20px;
+  }
+}
+
+.list_animated {
+  composes: list;
+}
+
+@media screen and (min-width: 1440px) {
+  .list > li > .label,
+  .list > li > .desc {
+    opacity: 0;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li > .label {
+    transform: translateY(16px);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li > .desc {
+    transform: translateX(-16px);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .list_animated > li > .label,
+  .list_animated > li > .desc {
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list_animated > li > .label {
+    transform: translateY(0);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list_animated > li > .desc {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(1) > .label,
+  .list > li:nth-child(1) > .desc {
+    transition:
+      opacity 0.75s var(--trans-func) 1s,
+      transform 0.75s var(--trans-func) 1s;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(2) > .label,
+  .list > li:nth-child(2) > .desc {
+    transition:
+      opacity 0.75s var(--trans-func) 1.5s,
+      transform 0.75s var(--trans-func) 1.5s;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(3) > .label,
+  .list > li:nth-child(3) > .desc {
+    transition:
+      opacity 0.75s var(--trans-func) 2s,
+      transform 0.75s var(--trans-func) 2s;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(4) > .label,
+  .list > li:nth-child(4) > .desc {
+    transition:
+      opacity 0.75s var(--trans-func) 2.5s,
+      transform 0.75s var(--trans-func) 2.5s;
+  }
+}

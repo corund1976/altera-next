@@ -1,0 +1,88 @@
+/* отступ от нижнего края карусели карточек до слайдера Dots */
+/* .slick-list {
+  padding-bottom: 36px !important; 
+}
+@media screen and (min-width: 1280px) {
+  .slick-list {
+    padding-bottom: 60px !important;
+  }
+} */
+
+.slick-dots {
+  font-size: 0; /* убираю стоковый размер строки слайдера */
+  text-align: center;
+
+  padding-top: 24px;
+}
+
+.slick-dots > li {
+  display: inline-block;
+}
+
+.slick-dots > li > button {
+  position: relative;
+
+  font-size: 0; /* убираю стоковую нумерацию кнопок */
+  line-height: 0;
+
+  border: none;
+  background-color: transparent;
+
+  /* background-color: #424348;  */
+  /*центр.точка*/
+
+  /* border: 6px solid var(--main-dark, #13141a);  */
+  /*фон.цвет кнопки*/
+  /* border-radius: 50%; */
+
+  /* Размер кнопки-точки */
+  width: 20px;
+  height: 20px;
+}
+
+.slick-dots > li > button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translateX(-50%) translateY(-50%);
+
+  width: 8px;
+  height: 8px;
+
+  border: 2px solid transparent;
+  border-radius: 50%;
+
+  background-color: #424348; /*центр.точка*/
+
+  transition:
+    background-color var(--trans-time) var(--trans-func),
+    border-color var(--trans-time) var(--trans-func),
+    width var(--trans-time) var(--trans-func),
+    height var(--trans-time) var(--trans-func);
+}
+
+.slick-dots > li > button:hover::before {
+  width: 12px;
+  height: 12px;
+
+  border-color: var(--main-green, #62ea99);
+
+  background-color: var(--main-dark, #13141a);
+}
+
+.slick-dots > li[class='slick-active'] > button::before {
+  width: 12px;
+  height: 12px;
+
+  border-color: var(--main-green, #62ea99);
+
+  background-color: var(--main-dark, #13141a);
+}
+
+/* убираю стоковые надписи */
+.slick-arrow {
+  font-size: 0;
+  line-height: 0;
+}

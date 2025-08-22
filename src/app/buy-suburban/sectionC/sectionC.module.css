@@ -1,0 +1,39 @@
+.section {
+  background-color: #fff;
+
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+@media screen and (min-width: 1440px) {
+  .section {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+}
+
+.image {
+  height: 238px;
+
+  border-radius: 10px;
+  overflow: hidden;
+
+  position: relative;
+}
+@media screen and (min-width: 1440px) {
+  .image {
+    height: 724px;
+  }
+}
+
+.image > img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.8s var(--trans-func);
+}
+
+.image > img:hover {
+  transform: scale(1.01);
+}

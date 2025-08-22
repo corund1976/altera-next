@@ -1,0 +1,363 @@
+.section {
+  background-color: #fff;
+
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+@media screen and (min-width: 1440px) {
+  .section {
+    padding-top: 180px;
+    padding-bottom: 90px;
+
+    position: relative;
+  }
+}
+
+.marker {
+  color: rgba(12, 11, 28, 0.3);
+
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1;
+
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1440px) {
+  .marker {
+    font-size: 20px;
+
+    margin-bottom: unset;
+
+    position: absolute;
+    top: 115px;
+    left: calc((100% - 1440px) / 2 + 20px);
+  }
+}
+
+.title {
+  color: #000;
+
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1;
+
+  text-transform: uppercase;
+
+  margin-bottom: 24px;
+}
+@media screen and (min-width: 1440px) {
+  .title {
+    font-size: 50px;
+
+    margin-left: 570px;
+
+    margin-bottom: 40px;
+  }
+}
+
+.title > span {
+  color: #005df3;
+}
+
+.list {
+  display: flex;
+
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+@media screen and (min-width: 1440px) {
+  .list {
+    flex-wrap: wrap;
+    margin-top: -32px;
+    margin-left: -24px;
+
+    overflow-x: unset;
+    scroll-snap-type: none;
+  }
+}
+
+.list > li:not(:last-child) {
+  margin-right: 15px;
+}
+@media screen and (min-width: 1440px) {
+  .list > li:not(:last-child) {
+    margin-right: unset;
+  }
+}
+
+.list > li {
+  flex-basis: 170px;
+  flex-shrink: 0;
+
+  scroll-snap-align: start;
+}
+@media screen and (min-width: 1440px) {
+  .list > li {
+    flex-basis: 260px;
+    margin-top: 32px;
+    margin-left: 24px;
+
+    scroll-snap-align: unset;
+  }
+}
+
+.image {
+  width: 170px;
+  height: 170px;
+
+  border-radius: 10px;
+  background-color: #d9d9d9;
+
+  overflow: hidden;
+
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1440px) {
+  .image {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+.image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name {
+  color: #000;
+
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+
+  margin-bottom: 24px;
+}
+@media screen and (min-width: 1440px) {
+  .name {
+    font-size: 24px;
+  }
+}
+
+.job {
+  color: rgba(0, 0, 0, 0.2);
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+
+  white-space: pre-wrap;
+}
+@media screen and (min-width: 1440px) {
+  .job {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.nav_btns {
+  display: flex;
+  margin-top: 16px;
+}
+@media screen and (min-width: 1440px) {
+  .nav_btns {
+    display: none;
+  }
+}
+
+.nav_btns > button {
+  border-radius: 30px;
+  border: 0.5px solid #005df3;
+
+  background-color: transparent;
+
+  background-repeat: no-repeat;
+  background-size: 32px;
+  background-position: center;
+
+  width: 50px;
+  height: 20px;
+}
+
+.btn_prev {
+  background-image: url('@/images/main/sectionB/arrow-left.svg');
+
+  margin-right: 10px;
+}
+.btn_next {
+  background-image: url('@/images/main/sectionB/arrow-right.svg');
+}
+
+.list_animated {
+  composes: list;
+}
+
+@media screen and (min-width: 1440px) {
+  .list > li > .image,
+  .list > li > .name,
+  .list > li > .job {
+    opacity: 0;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li > .image {
+    transform: translateY(16px);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li > .name {
+    transform: translateX(-16px);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li > .job {
+    transform: translateX(-24px);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .list_animated > li > .image,
+  .list_animated > li > .name,
+  .list_animated > li > .job {
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list_animated > li > .image {
+    transform: translateY(0);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list_animated > li > .name,
+  .list_animated > li > .job {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(1) > .image,
+  .list > li:nth-child(1) > .name,
+  .list > li:nth-child(1) > .job {
+    transition:
+      opacity 0.75s var(--trans-func) 1s,
+      transform 0.75s var(--trans-func) 1s;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(2) > .image,
+  .list > li:nth-child(2) > .name,
+  .list > li:nth-child(2) > .job {
+    transition:
+      opacity 0.75s var(--trans-func) 1.5s,
+      transform 0.75s var(--trans-func) 1.5s;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(3) > .image,
+  .list > li:nth-child(3) > .name,
+  .list > li:nth-child(3) > .job {
+    transition:
+      opacity 0.75s var(--trans-func) 2s,
+      transform 0.75s var(--trans-func) 2s;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(4) > .image,
+  .list > li:nth-child(4) > .name,
+  .list > li:nth-child(4) > .job {
+    transition:
+      opacity 0.75s var(--trans-func) 2.5s,
+      transform 0.75s var(--trans-func) 2.5s;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(5) > .image,
+  .list > li:nth-child(5) > .name,
+  .list > li:nth-child(5) > .job {
+    transition:
+      opacity 0.75s var(--trans-func) 3s,
+      transform 0.75s var(--trans-func) 3s;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(6) > .image,
+  .list > li:nth-child(6) > .name,
+  .list > li:nth-child(6) > .job {
+    transition:
+      opacity 0.75s var(--trans-func) 3.5s,
+      transform 0.75s var(--trans-func) 3.5s;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(7) > .image,
+  .list > li:nth-child(7) > .name,
+  .list > li:nth-child(7) > .job {
+    transition:
+      opacity 0.75s var(--trans-func) 4s,
+      transform 0.75s var(--trans-func) 4s;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(8) > .image,
+  .list > li:nth-child(8) > .name,
+  .list > li:nth-child(8) > .job {
+    transition:
+      opacity 0.75s var(--trans-func) 4.5s,
+      transform 0.75s var(--trans-func) 4.5s;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(9) > .image,
+  .list > li:nth-child(9) > .name,
+  .list > li:nth-child(9) > .job {
+    transition:
+      opacity 0.75s var(--trans-func) 5s,
+      transform 0.75s var(--trans-func) 5s;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(10) > .image,
+  .list > li:nth-child(10) > .name,
+  .list > li:nth-child(10) > .job {
+    transition:
+      opacity 0.75s var(--trans-func) 5.5s,
+      transform 0.75s var(--trans-func) 5.5s;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(3) {
+    padding-right: 572px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(4) {
+    padding-left: 572px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(5) {
+    padding-right: 284px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(6) {
+    padding-left: 284px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(8) {
+    padding-right: 284px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(9) {
+    padding-left: 572px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(10) {
+    padding-right: 284px;
+  }
+}

@@ -1,0 +1,95 @@
+.block {
+  margin-bottom: 24px;
+}
+@media screen and (min-width: 1440px) {
+  .block {
+    margin-bottom: unset;
+
+    position: absolute;
+    bottom: 64px;
+    left: calc((100% - 1440px) / 2 + 20px);
+    right: calc((100% - 1440px) / 2 + 20px);
+
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: normal;
+
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 1440px) {
+  .label {
+    font-size: 20px;
+
+    margin-bottom: 32px;
+  }
+}
+
+.contacts > a {
+  display: block;
+
+  width: fit-content;
+
+  font-size: 25px;
+  font-weight: 400;
+  line-height: normal;
+}
+@media screen and (min-width: 1440px) {
+  .contacts > a {
+    font-size: 50px;
+  }
+}
+
+.contacts > a:not(:last-child) {
+  margin-bottom: 4px;
+}
+@media screen and (min-width: 1440px) {
+  .contacts > a:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.franchise_text {
+  text-transform: uppercase;
+
+  font-family: Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+@media screen and (min-width: 1440px) {
+  .franchise_text {
+    font-size: 20px;
+
+    margin-top: unset;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .franchise_list {
+    position: absolute;
+    bottom: 0;
+    left: calc((100% - 1440px) / 2 + 950px);
+  }
+}
+
+.franchise_list > li {
+  font-family: Helvetica;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: normal;
+}
+@media screen and (min-width: 1440px) {
+  .franchise_list > li {
+    font-size: 20px;
+  }
+}

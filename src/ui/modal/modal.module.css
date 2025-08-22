@@ -1,0 +1,108 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 10;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--backdrop, rgba(13, 13, 10, 0.6));
+
+  opacity: 0;
+  visibility: hidden;
+
+  overflow-y: hidden;
+  overflow-x: hidden;
+
+  pointer-events: none;
+
+  transition:
+    opacity var(--trans-time) var(--trans-func),
+    visibility var(--trans-time) var(--trans-func);
+
+  /* Скрываем scrollbar для IE, Edge и Firefox */
+  -ms-overflow-style: none; /* IE и Edge */
+  scrollbar-width: 0; /* Firefox */
+}
+
+/* Скрываем scrollbar для Chrome, Safari и Opera */
+.backdrop::-webkit-scrollbar {
+  display: none;
+}
+
+.backdrop_active {
+  composes: backdrop;
+
+  opacity: 1;
+  visibility: visible;
+
+  pointer-events: all;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 8px;
+  background-color: var(--Base---1, #151618);
+
+  padding: 20px;
+
+  width: 355px;
+  height: fit-content;
+
+  transform: translateY(-100%);
+
+  transition: transform var(--trans-time) var(--trans-func);
+
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 500px;
+  }
+}
+
+.modal_active {
+  composes: modal;
+
+  transform: translateY(0);
+}
+
+.btn_close {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+  background-color: transparent;
+
+  color: var(--Base---3, #717274);
+
+  width: 40px;
+  height: 40px;
+
+  transition: color var(--trans-time) var(--trans-func);
+}
+
+.btn_close:hover {
+  color: var(--Accent---2, #fdfdfd);
+}
+
+.btn_close > svg {
+  fill: currentColor;
+
+  width: 20px;
+  height: 20px;
+}

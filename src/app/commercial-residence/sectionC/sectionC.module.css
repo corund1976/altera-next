@@ -1,0 +1,248 @@
+.section {
+  background-color: #2e2e2e;
+
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+@media screen and (min-width: 1440px) {
+  .section {
+    padding-top: 90px;
+    padding-bottom: 90px;
+
+    position: relative;
+  }
+}
+
+.title {
+  color: #eee;
+
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1;
+
+  text-transform: uppercase;
+
+  padding-right: 80px;
+
+  margin-bottom: 16px;
+}
+@media screen and (min-width: 1440px) {
+  .title {
+    font-size: 50px;
+
+    padding-left: 570px;
+    padding-right: 50px;
+
+    margin-bottom: 40px;
+  }
+}
+
+.title > span {
+  color: #005df3;
+}
+
+.gap {
+  display: inline-block;
+  text-align: right;
+  width: 42px;
+}
+@media screen and (min-width: 1440px) {
+  .gap {
+    width: 84px;
+  }
+}
+
+.text_btm,
+.text_top {
+  color: #eee;
+
+  font-size: 16px;
+  font-weight: 300;
+  line-height: normal;
+}
+@media screen and (min-width: 1440px) {
+  .text_btm,
+  .text_top {
+    font-size: 30px;
+
+    padding-left: 570px;
+    padding-right: 60px;
+  }
+}
+
+.text_top {
+  margin-bottom: 16px;
+}
+@media screen and (min-width: 1440px) {
+  .text_top {
+    margin-bottom: 48px;
+  }
+}
+
+.text_btm {
+  margin-bottom: 48px;
+}
+
+.image {
+  border-radius: 10px;
+  overflow: hidden;
+
+  width: 100%;
+  height: 340px;
+
+  margin-top: 48px;
+}
+@media screen and (min-width: 1440px) {
+  .image {
+    position: absolute;
+    top: 90px;
+    left: 20px;
+
+    width: 530px;
+    height: 515px;
+
+    margin-top: unset;
+  }
+}
+
+.image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -10px;
+}
+@media screen and (min-width: 1440px) {
+  .list {
+    margin-top: -40px;
+    margin-left: -64px;
+
+    padding-left: 570px;
+    padding-right: 48px;
+  }
+}
+
+.list > li {
+  flex-basis: 100%;
+  margin-top: 10px;
+}
+@media screen and (min-width: 1440px) {
+  .list > li {
+    flex-basis: calc(100% / 2 - 64px);
+    flex-shrink: 0;
+
+    width: calc(100% / 2 - 64px);
+
+    margin-top: 40px;
+    margin-left: 64px;
+  }
+}
+
+.text > span {
+  color: #005df3;
+}
+
+.label {
+  color: #005df3;
+
+  font-size: 100px;
+  font-weight: 400;
+  line-height: 1;
+
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1440px) {
+  .label {
+    margin-bottom: 24px;
+  }
+}
+
+.desc {
+  color: #fff;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+}
+@media screen and (min-width: 1440px) {
+  .desc {
+    font-size: 24px;
+  }
+}
+
+.list_animated {
+  composes: list;
+}
+
+@media screen and (min-width: 1440px) {
+  .list > li > .label,
+  .list > li > .desc {
+    opacity: 0;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li > .label {
+    transform: translateY(16px);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li > .desc {
+    transform: translateX(-16px);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .list_animated > li > .label,
+  .list_animated > li > .desc {
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list_animated > li > .label {
+    transform: translateY(0);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list_animated > li > .desc {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(1) > .label,
+  .list > li:nth-child(1) > .desc {
+    transition:
+      opacity 1s var(--trans-func) 1s,
+      transform 1s var(--trans-func) 1s;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(2) > .label,
+  .list > li:nth-child(2) > .desc {
+    transition:
+      opacity 1s var(--trans-func) 1.5s,
+      transform 1s var(--trans-func) 1.5s;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(3) > .label,
+  .list > li:nth-child(3) > .desc {
+    transition:
+      opacity 1s var(--trans-func) 2s,
+      transform 1s var(--trans-func) 2s;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(4) > .label,
+  .list > li:nth-child(4) > .desc {
+    transition:
+      opacity 1s var(--trans-func) 2.5s,
+      transform 1s var(--trans-func) 2.5s;
+  }
+}

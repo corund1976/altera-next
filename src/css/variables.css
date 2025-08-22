@@ -1,0 +1,22 @@
+:root {
+  --trans-time: 300ms;
+  --trans-func: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --window-height: 100%;
+  --window-width: 100%;
+  --window-scrollY: 0;
+}
+
+:root[data-theme='light'] {
+  --header-bgc: rgba(255, 255, 255, 0.8);
+  --header-btn-color: #0c0b1c;
+  --color: #0c0b1c;
+  --bgc: #fff;
+}
+
+:root[data-theme='dark'] {
+  --header-bgc: rgba(46, 46, 46, 0.8);
+  --header-btn-color: #eee;
+  --color: #fff;
+  --bgc: #2e2e2e;
+}

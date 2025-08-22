@@ -1,0 +1,260 @@
+.section {
+  background-color: #fff;
+
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  overflow: hidden;
+}
+@media screen and (min-width: 1440px) {
+  .section {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+}
+
+.title {
+  color: #0c0b1c;
+  text-transform: uppercase;
+
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1;
+
+  padding-right: 70px;
+
+  margin-bottom: 32px;
+}
+@media screen and (min-width: 1440px) {
+  .title {
+    font-size: 50px;
+
+    padding-left: 570px;
+    padding-right: 270px;
+
+    margin-bottom: 80px;
+  }
+}
+
+.title > p {
+  display: flex;
+  align-items: center;
+}
+
+.title_picture {
+  display: inline-block;
+
+  border-radius: 30px;
+  overflow: hidden;
+
+  width: 76px;
+  height: 18px;
+
+  margin-right: 8px;
+}
+@media screen and (min-width: 1440px) {
+  .title_picture {
+    width: 152px;
+    height: 36px;
+
+    margin-right: 12px;
+  }
+}
+
+.title_picture > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.list {
+  display: flex;
+
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+
+  padding-right: calc((var(--window-width) - 375px) / 2 + 131px);
+
+  margin-right: calc((375px - var(--window-width)) / 2 - 10px);
+}
+@media screen and (min-width: 1440px) {
+  .list {
+    flex-wrap: wrap;
+    margin-left: -92px;
+    margin-top: -50px;
+
+    overflow-x: unset;
+    scroll-snap-type: none;
+
+    padding-right: 244px;
+
+    margin-right: unset;
+  }
+}
+
+.list_animated {
+  composes: list;
+}
+
+.list > li {
+  flex-basis: 234px;
+  flex-shrink: 0;
+
+  scroll-snap-align: start;
+}
+@media screen and (min-width: 1440px) {
+  .list > li {
+    margin-left: 92px;
+    margin-top: 50px;
+
+    scroll-snap-align: unset;
+  }
+}
+
+.list > li:not(:last-child) {
+  margin-right: 24px;
+}
+@media screen and (min-width: 1440px) {
+  .list > li:not(:last-child) {
+    margin-right: unset;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(odd) {
+    flex-basis: 479px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(even) {
+    flex-basis: 565px;
+  }
+}
+
+.name {
+  color: #005df3;
+
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1;
+
+  text-transform: uppercase;
+  white-space: pre-wrap;
+
+  margin-bottom: 12px;
+}
+@media screen and (min-width: 1440px) {
+  .name {
+    font-size: 50px;
+
+    margin-bottom: 24px;
+  }
+}
+
+.text {
+  color: #000;
+
+  font-size: 16px;
+  font-weight: 300;
+  line-height: normal;
+
+  white-space: pre-wrap;
+}
+@media screen and (min-width: 1440px) {
+  .text {
+    font-size: 30px;
+  }
+}
+
+.nav_btns {
+  display: flex;
+  margin-top: 20px;
+}
+@media screen and (min-width: 1440px) {
+  .nav_btns {
+    display: none;
+  }
+}
+
+.nav_btns > button {
+  border-radius: 30px;
+  border: 0.5px solid #005df3;
+
+  background-color: transparent;
+
+  background-repeat: no-repeat;
+  background-size: 32px;
+  background-position: center;
+
+  width: 50px;
+  height: 20px;
+}
+
+.btn_prev {
+  background-image: url('@/images/main/sectionB/arrow-left.svg');
+
+  margin-right: 10px;
+}
+.btn_next {
+  background-image: url('@/images/main/sectionB/arrow-right.svg');
+}
+
+.list > li > .name,
+.list > li > .text {
+  opacity: 0;
+}
+.list > li > .name {
+  transform: translateY(16px);
+}
+.list > li > .text {
+  transform: translateX(-24px);
+}
+
+.list_animated > li > .name,
+.list_animated > li > .text {
+  opacity: 1;
+}
+.list_animated > li > .name {
+  transform: translateY(0);
+}
+.list_animated > li > .text {
+  transform: translateX(0);
+}
+
+.list > li > .name,
+.list > li > .text {
+  transition-property: opacity, transform;
+  transition-timing-function: var(--trans-func), var(--trans-func);
+  transition-duration: 0.75s, 0.75s;
+}
+
+.list > li:nth-child(1) > .name,
+.list > li:nth-child(1) > .text {
+  transition-delay: 1s, 1s;
+}
+.list > li:nth-child(2) > .name,
+.list > li:nth-child(2) > .text {
+  transition-delay: 1.5s, 1.5s;
+}
+.list > li:nth-child(3) > .name,
+.list > li:nth-child(3) > .text {
+  transition-delay: 2s, 2s;
+}
+.list > li:nth-child(4) > .name,
+.list > li:nth-child(4) > .text {
+  transition-delay: 2.5s, 2.5s;
+}
+.list > li:nth-child(5) > .name,
+.list > li:nth-child(5) > .text {
+  transition-delay: 3s, 3s;
+}
+.list > li:nth-child(6) > .name,
+.list > li:nth-child(6) > .text {
+  transition-delay: 3.5s, 3.5s;
+}
+
+/* .list_animated > li > .name,
+.list_animated > li > .text {
+  transition-duration: 0s, 0s;
+  transition-delay: 0s, 0s;
+} */

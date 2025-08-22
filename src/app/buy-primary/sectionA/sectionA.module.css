@@ -1,0 +1,175 @@
+.section {
+  background-color: #fff;
+
+  padding-bottom: 40px;
+}
+@media screen and (min-width: 1440px) {
+  .section {
+    padding-top: 90px;
+    padding-bottom: 90px;
+
+    position: sticky;
+    /* top: calc(var(--window-height) - 1110px); */
+    top: calc(var(--window-height) - 1110px - var(--window-height) / 3);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .text_image_wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .flex_wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .text_image_wrapper {
+    flex-basis: 830px;
+  }
+}
+
+.title {
+  color: #0c0b1c;
+
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1;
+
+  text-transform: uppercase;
+
+  margin-bottom: 16px;
+}
+@media screen and (min-width: 1440px) {
+  .title {
+    font-size: 70px;
+
+    padding-left: 570px;
+
+    margin-bottom: 40px;
+  }
+}
+
+.subtitle {
+  color: #000;
+
+  font-size: 16px;
+  font-weight: 300;
+  line-height: normal;
+
+  margin-bottom: 16px;
+}
+@media screen and (min-width: 1440px) {
+  .subtitle {
+    font-size: 30px;
+
+    padding-left: 570px;
+
+    margin-bottom: 40px;
+  }
+}
+
+.text {
+  color: #000;
+
+  font-size: 16px;
+  font-weight: 300;
+  line-height: normal;
+
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1440px) {
+  .text {
+    font-size: 30px;
+    font-weight: 400;
+
+    margin-bottom: unset;
+    margin-top: 50px;
+
+    padding-right: 60px;
+  }
+}
+
+.slogan_wrapper {
+  margin-top: 32px;
+}
+@media screen and (min-width: 1440px) {
+  .slogan_wrapper {
+    flex-grow: 1;
+
+    margin-top: unset;
+    margin-right: 40px;
+  }
+}
+
+.slogan {
+  color: #0c0b1c;
+
+  font-size: 25px;
+  font-weight: 400;
+  line-height: normal;
+
+  text-transform: uppercase;
+}
+@media screen and (min-width: 1440px) {
+  .slogan {
+    font-size: 50px;
+
+    position: sticky;
+    top: 458px;
+  }
+}
+
+.only_dsk {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  .only_dsk {
+    display: block;
+  }
+}
+
+.profit,
+.fast {
+  color: #005df3;
+}
+
+@media screen and (min-width: 1440px) {
+  .profit {
+    display: block;
+    text-align: center;
+  }
+}
+
+.fast {
+  padding-left: 150px;
+}
+@media screen and (min-width: 1440px) {
+  .fast {
+    padding-left: unset;
+    text-align: right;
+  }
+}
+
+.image {
+  border-radius: 10px;
+  overflow: hidden;
+  height: 436px;
+}
+@media screen and (min-width: 1440px) {
+  .image {
+    flex-shrink: 0;
+    height: 462px;
+  }
+}
+
+.image > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

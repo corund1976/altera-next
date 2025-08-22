@@ -1,0 +1,16 @@
+.btn_close {
+  position: fixed;
+  top: 26px;
+  right: calc((100% - 375px) / 2 + 10px);
+
+  z-index: 1;
+
+  width: 14px;
+  height: 14px;
+}
+@media screen and (min-width: 1440px) {
+  .btn_close {
+    top: 108px;
+    right: calc((100% - 1440px) / 2 + 20px);
+  }
+}

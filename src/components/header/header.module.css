@@ -1,0 +1,156 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+
+  background-color: var(--bgc);
+  /* box-shadow: 5px 20px 34px rgba(59, 79, 150, 0.08); */
+}
+
+.header > div {
+  padding-top: 56px;
+  padding-bottom: 4px;
+
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width: 1440px) {
+  .header > div {
+    padding-top: unset;
+    padding-bottom: unset;
+
+    height: 100px;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  margin-right: auto;
+}
+@media screen and (min-width: 1440px) {
+  .logo {
+    margin-right: 24px;
+  }
+}
+
+.logo_mob {
+  fill: var(--header-btn-color);
+}
+
+.link_phone {
+  border: none;
+  background-color: transparent;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 1440px) {
+  .link_phone {
+    width: fit-content;
+    height: 26px;
+
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .link_phone > svg {
+    display: none;
+  }
+}
+
+.link_phone > span {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  .link_phone > span {
+    display: block;
+
+    color: #005df3;
+
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+  }
+}
+
+.btn_menu {
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  background-color: transparent;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+@media screen and (min-width: 1440px) {
+  .btn_menu {
+    display: none;
+  }
+}
+
+.btn_menu > svg {
+  stroke: var(--header-btn-color);
+}
+
+.btn_feedback {
+  display: none;
+}
+@media screen and (min-width: 1440px) {
+  .btn_feedback {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 164px;
+    height: 38px;
+  }
+}
+
+.btn_feedback > button {
+  border-radius: 54px;
+  border: 1px solid var(--header-btn-color);
+
+  background-color: transparent;
+
+  padding: 10px 12px;
+
+  width: fit-content;
+
+  display: flex;
+  align-items: center;
+
+  color: var(--header-btn-color);
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+
+  transition: padding var(--trans-time) var(--trans-func);
+}
+
+.btn_feedback > button:hover {
+  padding: 11px 16px;
+}
+
+@media screen and (min-width: 1440px) {
+  .btn_feedback > button > svg {
+    width: 9px;
+    height: 9px;
+
+    margin-left: 6px;
+
+    stroke: currentColor;
+  }
+}

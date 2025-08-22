@@ -1,0 +1,239 @@
+.section {
+  background-color: #fff;
+
+  position: relative;
+  z-index: 0;
+}
+@media screen and (min-width: 1440px) {
+  .section {
+    position: sticky;
+    top: 0;
+  }
+}
+
+.block {
+  padding-top: 45px;
+  padding-bottom: 45px;
+
+  padding-left: 10px;
+  padding-right: 10px;
+
+  border-radius: 0 0 10px 10px;
+  background-color: #eee;
+}
+@media screen and (min-width: 1440px) {
+  .block {
+    padding-top: 90px;
+    padding-bottom: 90px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+    position: relative;
+  }
+}
+
+.marker {
+  color: rgba(12, 11, 28, 0.3);
+
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1;
+
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1440px) {
+  .marker {
+    font-size: 20px;
+
+    margin-bottom: unset;
+
+    position: absolute;
+    top: 115px;
+    left: 20px;
+  }
+}
+
+.title {
+  color: #0c0b1c;
+
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1.2;
+
+  text-transform: uppercase;
+
+  margin-bottom: 24px;
+}
+@media screen and (min-width: 1440px) {
+  .title {
+    font-size: 50px;
+    line-height: 1;
+
+    margin-left: 550px;
+
+    margin-bottom: 80px;
+  }
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -24px;
+}
+@media screen and (min-width: 1440px) {
+  .list {
+    margin-top: -40px;
+    margin-left: -40px;
+
+    padding-left: 550px;
+  }
+}
+
+.list > li {
+  flex-basis: 100%;
+  margin-top: 24px;
+}
+@media screen and (min-width: 1440px) {
+  .list > li {
+    flex-basis: calc(100% / 2 - 40px);
+    margin-top: 40px;
+    margin-left: 40px;
+  }
+}
+
+.list_animated {
+  composes: list;
+}
+
+.image {
+  margin-bottom: 12px;
+}
+@media screen and (min-width: 1440px) {
+  .image {
+    margin-bottom: 16px;
+  }
+}
+
+.desc {
+  color: #000;
+  text-transform: uppercase;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
+@media screen and (min-width: 1440px) {
+  .desc {
+    font-size: 20px;
+  }
+}
+
+.desc > span {
+  color: #005df3;
+}
+
+/* Animation */
+
+/*Карточка становится непрозрачной */
+@media screen and (min-width: 1440px) {
+  .list > li {
+    opacity: 0;
+    transition: opacity 1s var(--trans-func);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .list_animated > li {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(1) {
+    transition-delay: 0.5s;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(2) {
+    transition-delay: 0.75s;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(3) {
+    transition-delay: 1s;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(4) {
+    transition-delay: 1.25s;
+  }
+}
+
+/* Картинка появляется слева */
+@media screen and (min-width: 1440px) {
+  .list > li > .image {
+    transform: translateX(-24px);
+    transition: transform 1s var(--trans-func);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list_animated > li > .image {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(1) > .image {
+    transition-delay: 0.5s;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(2) > .image {
+    transition-delay: 0.75s;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(3) > .image {
+    transition-delay: 1s;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(4) > .image {
+    transition-delay: 1.25s;
+  }
+}
+
+/* Текст появляется снизу */
+@media screen and (min-width: 1440px) {
+  .list > li > .desc {
+    transform: translateY(16px);
+    transition: transform 1s var(--trans-func);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list_animated > li > .desc {
+    transform: translateY(0);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(1) > .desc {
+    transition-delay: 0.5s;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(2) > .desc {
+    transition-delay: 0.75s;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(3) > .desc {
+    transition-delay: 1s;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .list > li:nth-child(4) > .desc {
+    transition-delay: 1.25s;
+  }
+}
