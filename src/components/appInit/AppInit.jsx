@@ -15,7 +15,7 @@ import useWindowSize from '@/hooks/useWindowSize';
 
 import LoaderSpinner from '@/components/loaderSpinner';
 
-function App() {
+function AppInit() {
   const dispatch = useDispatch();
 
   const displayLoader = useSelector(appSelectors.displayLoader);
@@ -67,4 +67,4 @@ function App() {
   return <>{displayLoader && <LoaderSpinner />}</>;
 }
 
-export default App;
+export default AppInit;

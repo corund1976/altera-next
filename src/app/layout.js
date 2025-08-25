@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 
+import AppInit from '@/components/appInit';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import YandexMetrika from '@/components/yandexMetrika';
 
 import Providers from './providers';
-import App from './App';
 
 import '@/css/reset.css';
 import '@/css/variables.css';
@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <Providers>
-          <App />
+          <AppInit />
           <Header />
           <main>{children}</main>
           <Footer />
