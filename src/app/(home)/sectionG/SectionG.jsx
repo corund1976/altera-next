@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 import dataSelectors from '@/redux/data/dataSelectors';
 
-import ArrowIcon from '@/images/main/sectionG/arrow.svg';
+import ArrowIcon from '@/images/main/sectionG/arrow.react.svg';
 
 import Container from '@/components/container';
 
@@ -55,13 +55,18 @@ function SectionG() {
           </p>
 
           <ul className={s.list} ref={sliderRef}>
-            {reviews &&
+            {reviews?.length > 0 &&
               reviews.map(
                 ({ id, photo_url, name, description, review, text, link }) => (
                   <li key={id}>
                     <div className={s.avatar}>
                       {photo_url ? (
-                        <Image src={photo_url} alt="customer" />
+                        <Image
+                          src={photo_url}
+                          alt="customer"
+                          width={70}
+                          height={70}
+                        />
                       ) : (
                         <p>{name[0]}</p>
                       )}

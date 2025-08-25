@@ -66,41 +66,43 @@ function Header() {
   const { isDesktop = true } = useMatchMedia();
 
   return (
-    <>
-      <header className={s.header}>
-        <Container>
-          <Link href="/" onClick={scrollTop} className={s.logo}>
-            {isDesktop ? (
-              <ArrowUpIcon width={47} height={26} />
-            ) : (
-              <LogoIcon className={s.logo_mob} />
-            )}
-          </Link>
-          <a href={`tel:${PHONE}`} className={s.link_phone}>
-            <PhoneIcon />
-            <span>{PHONE}</span>
-          </a>
-          {isDesktop && <Nav />}
+    !pathname?.includes('/case') && (
+      <>
+        <header className={s.header}>
+          <Container>
+            <Link href="/" onClick={scrollTop} className={s.logo}>
+              {isDesktop ? (
+                <ArrowUpIcon width={47} height={26} />
+              ) : (
+                <LogoIcon className={s.logo_mob} />
+              )}
+            </Link>
+            <a href={`tel:${PHONE}`} className={s.link_phone}>
+              <PhoneIcon />
+              <span>{PHONE}</span>
+            </a>
+            {isDesktop && <Nav />}
 
-          <div className={s.btn_feedback}>
-            <button type="button" onClick={handleFeedback}>
-              обратный звонок <ArrowUpRightIcon />
+            <div className={s.btn_feedback}>
+              <button type="button" onClick={handleFeedback}>
+                обратный звонок <ArrowUpRightIcon />
+              </button>
+            </div>
+
+            <button
+              type="button"
+              onClick={toggleMenu}
+              className={s.btn_menu}
+              title="menu"
+            >
+              <BurgerIcon />
             </button>
-          </div>
+          </Container>
+        </header>
 
-          <button
-            type="button"
-            onClick={toggleMenu}
-            className={s.btn_menu}
-            title="menu"
-          >
-            <BurgerIcon />
-          </button>
-        </Container>
-      </header>
-
-      {displayMenu && <Menu close={toggleMenu} />}
-    </>
+        {displayMenu && <Menu close={toggleMenu} />}
+      </>
+    )
   );
 }
 

@@ -17,7 +17,7 @@ export const metadata = {
   description: `🏡 Купите квартиру на вторичном рынке с риэлтором агентства недвижимости «Альтера».\n⭐️ Выгодные цены и быстрый поиск квартиры в Москве, Сочи, Казани, Санкт-Петербурге и других крупных городах.\n☎️ Телефон: ${phone}.`,
 };
 
-function page() {
+function BuySecondaryage() {
   return <Suspense fallback={<LoaderSpinner />}>
     <Hero />
     <SectionA />
@@ -29,4 +29,4 @@ function page() {
   </Suspense>
 }
 
-export default page;
+export default BuySecondaryage;

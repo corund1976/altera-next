@@ -54,7 +54,7 @@ function SectionE() {
                     ></iframe>
                   ) : (
                     <>
-                      <Image src={data?.first_poster_path} alt="poster" />
+                      <Image src={data?.first_poster_path} alt="poster" fill />
                       <button
                         type="button"
                         onClick={() => setShowVideo(1)}
@@ -97,7 +97,7 @@ function SectionE() {
                     ></iframe>
                   ) : (
                     <>
-                      <Image src={data?.second_poster_path} alt="poster" />
+                      <Image src={data?.second_poster_path} alt="poster" fill />
                       <button
                         type="button"
                         onClick={() => setShowVideo(2)}
@@ -119,7 +119,7 @@ function SectionE() {
               <div>
                 <div className={s.picture}>
                   {data?.first_image_path && (
-                    <Image src={data?.first_image_path} alt="picture" />
+                    <Image src={data?.first_image_path} alt="picture" fill />
                   )}
                 </div>
                 <div
@@ -132,7 +132,7 @@ function SectionE() {
               <div>
                 <div className={s.picture}>
                   {data?.second_image_path && (
-                    <Image src={data?.second_image_path} alt="picture" />
+                    <Image src={data?.second_image_path} alt="picture" fill />
                   )}
                 </div>
                 <div

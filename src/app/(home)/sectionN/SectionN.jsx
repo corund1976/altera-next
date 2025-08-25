@@ -22,20 +22,36 @@ function SectionN() {
           {portfolio && portfolio[0] && (
             <div className={s.block_1}>
               <div className={s.image}>
-                <Image src={portfolio[0]?.picture_path} alt="picture" />
+                <Image
+                  src={portfolio[0]?.picture_path}
+                  alt="picture"
+                  fill
+                  sizes="(max-width: 1439px) 335px, 864px"
+                />
                 <a
                   href={portfolio[0]?.external_url}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {portfolio[0]?.external_url &&
-                  portfolio[0]?.external_url.includes('dzen.ru') ? (
+                  {portfolio[0]?.external_url && (
                     <>
-                      <Image src={dzen} alt="dzen" /> Дзен
-                    </>
-                  ) : (
-                    <>
-                      <Image src={youtube} alt="youtube" /> Youtube
+                      <Image
+                        src={
+                          portfolio[0]?.external_url.includes('dzen.ru')
+                            ? dzen
+                            : youtube
+                        }
+                        alt="social"
+                        width={
+                          portfolio[1]?.external_url.includes('dzen.ru')
+                            ? 20
+                            : 27
+                        }
+                        height={20}
+                      />{' '}
+                      {portfolio[0]?.external_url.includes('dzen.ru')
+                        ? 'Дзен'
+                        : 'Youtube'}
                     </>
                   )}
                 </a>
@@ -52,20 +68,36 @@ function SectionN() {
             {portfolio && portfolio[1] && (
               <div className={s.block_2}>
                 <div className={s.image}>
-                  <Image src={portfolio[1]?.picture_path} alt="picture" />
+                  <Image
+                    src={portfolio[1]?.picture_path}
+                    alt="picture"
+                    fill
+                    sizes="(max-width: 1439px) 335px, 416px"
+                  />
                   <a
                     href={portfolio[1]?.external_url}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {portfolio[1]?.external_url &&
-                    portfolio[1]?.external_url.includes('dzen.ru') ? (
+                    {portfolio[1]?.external_url && (
                       <>
-                        <Image src={dzen} alt="dzen" /> Дзен
-                      </>
-                    ) : (
-                      <>
-                        <Image src={youtube} alt="youtube" /> Youtube
+                        <Image
+                          src={
+                            portfolio[1]?.external_url.includes('dzen.ru')
+                              ? dzen
+                              : youtube
+                          }
+                          alt="social"
+                          width={
+                            portfolio[1]?.external_url.includes('dzen.ru')
+                              ? 20
+                              : 27
+                          }
+                          height={20}
+                        />{' '}
+                        {portfolio[1]?.external_url.includes('dzen.ru')
+                          ? 'Дзен'
+                          : 'Youtube'}
                       </>
                     )}
                   </a>
@@ -77,20 +109,36 @@ function SectionN() {
             {portfolio && portfolio[2] && (
               <div className={s.block_3}>
                 <div className={s.image}>
-                  <Image src={portfolio[2]?.picture_path} alt="picture" />
+                  <Image
+                    src={portfolio[2]?.picture_path}
+                    alt="picture"
+                    fill
+                    sizes="(max-width: 1439px) 335px, 416px"
+                  />
                   <a
                     href={portfolio[2]?.external_url}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {portfolio[2]?.external_url &&
-                    portfolio[2]?.external_url.includes('dzen.ru') ? (
+                    {portfolio[2]?.external_url && (
                       <>
-                        <Image src={dzen} alt="dzen" /> Дзен
-                      </>
-                    ) : (
-                      <>
-                        <Image src={youtube} alt="youtube" /> Youtube
+                        <Image
+                          src={
+                            portfolio[2]?.external_url.includes('dzen.ru')
+                              ? dzen
+                              : youtube
+                          }
+                          alt="social"
+                          width={
+                            portfolio[1]?.external_url.includes('dzen.ru')
+                              ? 20
+                              : 27
+                          }
+                          height={20}
+                        />{' '}
+                        {portfolio[2]?.external_url.includes('dzen.ru')
+                          ? 'Дзен'
+                          : 'Youtube'}
                       </>
                     )}
                   </a>

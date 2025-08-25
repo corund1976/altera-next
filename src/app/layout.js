@@ -1,15 +1,10 @@
-'use client';
-
-import { Provider } from 'react-redux';
-import { usePathname } from 'next/navigation';
 import PropTypes from 'prop-types';
-
-import store from '@/redux/store';
 
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import YandexMetrika from '@/components/yandexMetrika';
 
+import Providers from './providers';
 import App from './App';
 
 import '@/css/reset.css';
@@ -22,7 +17,6 @@ import '@/css/ymaps.css';
 import '@/css/faStyles.css';
 
 export default function RootLayout({ children }) {
-  const pathname = usePathname();
 
   return (
     <html lang="ru" data-scroll-behavior="smooth">
@@ -30,15 +24,12 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/arrow-up.svg" type="image/svg+xml" />
       </head>
       <body>
-        <Provider store={store}>
+        <Providers>
           <App />
-
-          {!pathname?.includes('/case') && <Header />}
-
+          <Header />
           <main>{children}</main>
-
-          {!pathname?.includes('/case') && <Footer />}
-        </Provider>
+          <Footer />
+        </Providers>
 
         <YandexMetrika />
       </body>

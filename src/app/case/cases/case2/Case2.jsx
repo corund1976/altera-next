@@ -26,7 +26,7 @@ function Case2() {
             жилью в ЖК «Лето»
           </p>
           <div className={s.image_wrapper}>
-            <Image src={image} alt="image" />
+            <Image src={image} alt="image" priority />
           </div>
           <p className={s.author}>
             Рассказывает риэлтор

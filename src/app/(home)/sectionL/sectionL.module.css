@@ -111,6 +111,8 @@
   overflow: hidden;
 
   margin-bottom: 20px;
+
+  position: relative;
 }
 @media screen and (min-width: 1440px) {
   .image {
@@ -120,8 +122,8 @@
 }
 
 .image > img {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
   object-fit: cover;
 }
 

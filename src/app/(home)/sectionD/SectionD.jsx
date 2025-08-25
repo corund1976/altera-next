@@ -5,8 +5,6 @@ import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import RouteNames from '@/app/routes';
-
 import case1 from '@/images/main/sectionD/case-1.webp';
 import case2 from '@/images/main/sectionD/case-2.webp';
 import case3 from '@/images/main/sectionD/case-3.webp';
@@ -63,7 +61,7 @@ function SectionD() {
             <div>
               <Image src={case1} alt="case" />
             </div>
-            <Link href={`${RouteNames.CASE}?id=1`}>
+            <Link href="/case?id=1">
               <ArrowIcon />
             </Link>
           </li>
@@ -72,7 +70,7 @@ function SectionD() {
             <div>
               <Image src={case2} alt="case" />
             </div>
-            <Link href={`${RouteNames.CASE}?id=2`}>
+            <Link href="/case?id=2">
               <ArrowIcon />
             </Link>
           </li>
@@ -81,7 +79,7 @@ function SectionD() {
             <div>
               <Image src={case3} alt="case" />
             </div>
-            <Link href={`${RouteNames.CASE}?id=3`}>
+            <Link href="/case?id=3">
               <ArrowIcon />
             </Link>
           </li>

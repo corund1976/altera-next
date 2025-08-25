@@ -1,8 +1,6 @@
 import { useRef, useState } from 'react';
 import Link from 'next/link';
 
-import RouteNames from '@/app/routes';
-
 import useOutsideClick from '@/hooks/useOutsideClick';
 
 import Dropdown from '@/images/dropdown.react.svg';
@@ -30,39 +28,31 @@ function Nav() {
           Покупка <Dropdown />
         </button>
         <div className={displaySubmenu ? s.submenu : s.submenu_hidden}>
-          <Link
-            href={RouteNames.BUY_PRIMARY}
-            onClick={toggleSubmenu}
-            className={s.link}
-          >
+          <Link href="/buy-primary" onClick={toggleSubmenu} className={s.link}>
             квартиры в новостройке
           </Link>
           <Link
-            href={RouteNames.BUY_SECONDARY}
+            href="/buy-secondary"
             onClick={toggleSubmenu}
             className={s.link}
           >
             вторичное жилье
           </Link>
-          <Link
-            href={RouteNames.BUY_SUBURBAN}
-            onClick={toggleSubmenu}
-            className={s.link}
-          >
+          <Link href="/buy-suburban" onClick={toggleSubmenu} className={s.link}>
             дом с участком
           </Link>
         </div>
       </div>
-      <Link href={RouteNames.SELL_RESIDENCE} className={s.link}>
+      <Link href="/sell-residence" className={s.link}>
         Продажа
       </Link>
-      <Link href={RouteNames.RENT_RESIDENCE} className={s.link}>
+      <Link href="/rent-residence" className={s.link}>
         Аренда
       </Link>
-      <Link href={RouteNames.COMMERCIAL_RESIDENCE} className={s.link}>
+      <Link href="/commercial-residence" className={s.link}>
         Коммерческая недвижимость
       </Link>
-      <Link href={RouteNames.CAREER} className={s.link}>
+      <Link href="/career" className={s.link}>
         Партнерство
       </Link>
     </nav>

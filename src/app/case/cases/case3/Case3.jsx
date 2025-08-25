@@ -24,7 +24,7 @@ function Case3() {
         <div className={s.flex_wrapper}>
           <p className={s.under_title}></p>
           <div className={s.image_wrapper}>
-            <Image src={image} alt="image" />
+            <Image src={image} alt="image" priority />
           </div>
           <p className={s.author}>
             Рассказывает риэлтор

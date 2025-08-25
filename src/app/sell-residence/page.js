@@ -17,7 +17,7 @@ export const metadata = {
   description: `🏡 Продайте квартиру и другую недвижимость с риэлтором компании «Альтера» в Москве, Сочи, Казани, Санкт-Петербурге и других крупных городах.\n⭐️ Выгодные цены и быстрые сделки.\n☎️ Телефон: ${phone}.`,
 };
 
-function page() {
+function SellResidencePage() {
   return <Suspense fallback={<LoaderSpinner />}>
     <Hero />
     <SectionA />
@@ -29,4 +29,4 @@ function page() {
   </Suspense>
 }
 
-export default page;
+export default SellResidencePage;

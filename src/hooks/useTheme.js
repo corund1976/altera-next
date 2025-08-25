@@ -6,8 +6,6 @@ import { usePathname } from 'next/navigation';
 
 import { setTheme } from "@/redux/app/appSlice";
 
-import RouteNames from "@/app/routes";
-
 const useTheme = () => {
   const dispatch = useDispatch();
 
@@ -16,7 +14,7 @@ const useTheme = () => {
   useEffect(() => {
     if (!document) return;
 
-    if (pathname.includes(RouteNames.COMMERCIAL_RESIDENCE)) {
+    if (pathname.includes('/commercial-residence')) {
       dispatch(setTheme('dark'));
       document.documentElement.dataset.theme = 'dark';
     }

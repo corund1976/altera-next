@@ -55,7 +55,12 @@ function SectionL() {
             team.map(({ id, picture_path, name, description }) => (
               <li key={id}>
                 <div className={s.image}>
-                  <Image src={picture_path} alt="image" />
+                  <Image
+                    src={picture_path}
+                    alt="image"
+                    fill
+                    sizes="(max-width: 1439px) 170px, 260px"
+                  />
                 </div>
                 <p className={s.name}>{name}</p>
                 <p className={s.job}>{description}</p>

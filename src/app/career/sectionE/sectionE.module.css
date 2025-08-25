@@ -163,8 +163,7 @@
   }
 }
 
-.video > iframe,
-.video > img {
+.video > iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -176,6 +175,15 @@
   border: none;
 
   background-color: #d9d9d9;
+}
+
+.video > img {
+  border-radius: 10px;
+  border: none;
+
+  background-color: #d9d9d9;
+
+  object-fit: cover;
 }
 
 .btn_play {
@@ -236,6 +244,8 @@
   background-color: #d9d9d9;
 
   overflow: hidden;
+
+  position: relative;
 }
 @media screen and (min-width: 1440px) {
   .picture {
@@ -247,8 +257,8 @@
 }
 
 .picture > img {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
   object-fit: cover;
 }
 

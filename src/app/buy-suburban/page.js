@@ -19,7 +19,7 @@ export const metadata = {
   description: `🏡 Купите дом и коттедж за городом с помощью агента недвижимости «Альтера».\n⭐️ Выгодные цены с льготной ипотекой и быстрый подбор в Москве, Сочи, Казани, Санкт-Петербурге и других крупных городах.\n☎️ Телефон: ${phone}.`,
 };
 
-function page() {
+function BuySuburbanPage() {
   return <Suspense fallback={<LoaderSpinner />}>
     <Hero />
     <SectionA />
@@ -33,4 +33,4 @@ function page() {
   </Suspense>
 }
 
-export default page;
+export default BuySuburbanPage;

@@ -3,8 +3,6 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 
-import RouteNames from '@/app/routes';
-
 import useOutsideClick from '@/hooks/useOutsideClick';
 
 import Dropdown from '@/images/dropdown.react.svg';
@@ -42,53 +40,53 @@ function Nav({ closeMenu = () => {} }) {
         </button>
         <div className={displaySubmenu ? s.submenu : s.submenu_hidden}>
           <Link
-            href={RouteNames.BUY_PRIMARY}
+            href="/buy-primary"
             onClick={handleClick}
-            className={navlinkStyle(RouteNames.BUY_PRIMARY)}
+            className={navlinkStyle('/buy-primary')}
           >
             квартиры в новостройке
           </Link>
           <Link
-            href={RouteNames.BUY_SECONDARY}
+            href="/buy-secondary"
             onClick={handleClick}
-            className={navlinkStyle(RouteNames.BUY_SECONDARY)}
+            className={navlinkStyle('/buy-secondary')}
           >
             вторичное жилье
           </Link>
           <Link
-            href={RouteNames.BUY_SUBURBAN}
+            href="/buy-suburban"
             onClick={handleClick}
-            className={navlinkStyle(RouteNames.BUY_SUBURBAN)}
+            className={navlinkStyle('/buy-suburban')}
           >
             дом с участком
           </Link>
         </div>
       </div>
       <Link
-        href={RouteNames.SELL_RESIDENCE}
+        href="/sell-residence"
         onClick={closeMenu}
-        className={navlinkStyle(RouteNames.SELL_RESIDENCE)}
+        className={navlinkStyle('/sell-residence')}
       >
         продажа
       </Link>
       <Link
-        href={RouteNames.RENT_RESIDENCE}
+        href="/rent-residence"
         onClick={closeMenu}
-        className={navlinkStyle(RouteNames.RENT_RESIDENCE)}
+        className={navlinkStyle('/rent-residence')}
       >
         аренда
       </Link>
       <Link
-        href={RouteNames.COMMERCIAL_RESIDENCE}
+        href="/commercial-residence"
         onClick={closeMenu}
-        className={navlinkStyle(RouteNames.COMMERCIAL_RESIDENCE)}
+        className={navlinkStyle('/commercial-residence')}
       >
         коммерческая недвижимость
       </Link>
       <Link
-        href={RouteNames.CAREER}
+        href="/career"
         onClick={closeMenu}
-        className={navlinkStyle(RouteNames.CAREER)}
+        className={navlinkStyle('/career')}
       >
         партнерство
       </Link>

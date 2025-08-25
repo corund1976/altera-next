@@ -18,14 +18,21 @@ const nextConfig = (phase = '') => {
         },
       },
     },
-    // images: {
-    //   localPatterns: [
-    //     {
-    //       pathname: '/images/**',
-    //       search: '',
-    //     },
-    //   ],
-    // },
+    images: {
+      //   localPatterns: [
+      //     {
+      //       pathname: '/images/**',
+      //       search: '',
+      //     },
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'api-web-test.alterait.com', // Replace with your image domain
+          port: '',
+          pathname: '/storage/**', // Optional: restrict to a specific path
+        },
+      ]
+    }
   }
 
   return nextConfigOptions

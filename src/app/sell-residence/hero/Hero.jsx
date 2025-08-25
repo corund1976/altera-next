@@ -41,7 +41,11 @@ function Hero() {
           </div>
         </div>
         <div className={s.image}>
-          <Image src={isDesktop ? bannerDsk : bannerMob} alt="banner" />
+          <Image
+            src={isDesktop ? bannerDsk : bannerMob}
+            alt="banner"
+            priority
+          />
         </div>
       </Container>
     </section>

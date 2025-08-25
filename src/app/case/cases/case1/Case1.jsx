@@ -28,7 +28,7 @@ function Case1() {
             <br />и доходом от 70 000 ₽ в месяц
           </p>
           <div className={s.image_wrapper}>
-            <Image src={image} alt="image" />
+            <Image src={image} alt="image" priority />
           </div>
           <p className={s.author}>
             Рассказывает риэлтор

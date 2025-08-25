@@ -17,7 +17,7 @@ export const metadata = {
   description: `🏡 Купите коммерческую недвижимость с помощью агента компании «Альтера».\n⭐️ Выгодные цены и быстрый поиск недвижимости в Москве, Сочи, Казани, Санкт-Петербурге и других крупных городах.\n☎️ Телефон: ${phone}.`,
 };
 
-function page() {
+function CommercialResidencePage() {
   return <Suspense fallback={<LoaderSpinner />}>
     <Hero />
     <SectionA />
@@ -29,4 +29,4 @@ function page() {
   </Suspense>
 }
 
-export default page;
+export default CommercialResidencePage;

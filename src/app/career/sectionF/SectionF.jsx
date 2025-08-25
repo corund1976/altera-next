@@ -59,7 +59,7 @@ function SectionF() {
                 ></iframe>
               ) : (
                 <>
-                  <Image src={data?.first_poster_path} alt="poster" />
+                  <Image src={data?.first_poster_path} alt="poster" fill />
                   <button
                     type="button"
                     onClick={() => setShowVideo(1)}
@@ -81,7 +81,7 @@ function SectionF() {
                 ></iframe>
               ) : (
                 <>
-                  <Image src={data?.second_poster_path} alt="poster" />
+                  <Image src={data?.second_poster_path} alt="poster" fill />
                   <button
                     type="button"
                     onClick={() => setShowVideo(2)}
@@ -103,7 +103,7 @@ function SectionF() {
                 ></iframe>
               ) : (
                 <>
-                  <Image src={data?.third_poster_path} alt="poster" />
+                  <Image src={data?.third_poster_path} alt="poster" fill />
                   <button
                     type="button"
                     onClick={() => setShowVideo(3)}

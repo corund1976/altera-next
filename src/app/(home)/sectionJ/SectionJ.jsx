@@ -75,9 +75,9 @@ function SectionJ() {
         </p>
 
         <ul className={isOnScreen ? s.list_animated : s.list} ref={sliderRef}>
-          {history &&
+          {history?.length > 0 &&
             history.map(({ year, title, description }) => (
-              <li key={year}>
+              <li key={year.toString()}>
                 <p className={s.year}>{year}</p>
                 <p className={s.name}>{title}</p>
                 <div

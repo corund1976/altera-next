@@ -18,7 +18,7 @@ export const metadata = {
   description: `🏡 Трудоустройтесь или освойте профессию риэлтора в агентстве недвижимости «Альтера» в Казани.\n⭐️ Присоединяйтесь к нашей команде.\n☎️ Телефон: ${phone}.`,
 };
 
-function page() {
+function CareerPage() {
   return <Suspense fallback={<LoaderSpinner />}>
     <Hero />
     <SectionA />
@@ -31,4 +31,4 @@ function page() {
   </Suspense>
 }
 
-export default page;
+export default CareerPage;
