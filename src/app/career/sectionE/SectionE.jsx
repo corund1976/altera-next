@@ -54,7 +54,12 @@ function SectionE() {
                     ></iframe>
                   ) : (
                     <>
-                      <Image src={data?.first_poster_path} alt="poster" fill />
+                      <Image
+                        src={data?.first_poster_path}
+                        alt="poster"
+                        fill
+                        sizes="(max-width: 1439px) 350px, 380px"
+                      />
                       <button
                         type="button"
                         onClick={() => setShowVideo(1)}
@@ -97,7 +102,12 @@ function SectionE() {
                     ></iframe>
                   ) : (
                     <>
-                      <Image src={data?.second_poster_path} alt="poster" fill />
+                      <Image
+                        src={data?.second_poster_path}
+                        alt="poster"
+                        fill
+                        sizes="(max-width: 1439px) 350px, 380px"
+                      />
                       <button
                         type="button"
                         onClick={() => setShowVideo(2)}
@@ -119,7 +129,12 @@ function SectionE() {
               <div>
                 <div className={s.picture}>
                   {data?.first_image_path && (
-                    <Image src={data?.first_image_path} alt="picture" fill />
+                    <Image
+                      src={data?.first_image_path}
+                      alt="picture"
+                      fill
+                      sizes="(max-width: 1439px) 350px, 300px"
+                    />
                   )}
                 </div>
                 <div
@@ -132,7 +147,12 @@ function SectionE() {
               <div>
                 <div className={s.picture}>
                   {data?.second_image_path && (
-                    <Image src={data?.second_image_path} alt="picture" fill />
+                    <Image
+                      src={data?.second_image_path}
+                      alt="picture"
+                      fill
+                      sizes="(max-width: 1439px) 350px, 300px"
+                    />
                   )}
                 </div>
                 <div

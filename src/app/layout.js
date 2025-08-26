@@ -17,7 +17,6 @@ import '@/css/ymaps.css';
 import '@/css/faStyles.css';
 
 export default function RootLayout({ children }) {
-
   return (
     <html lang="ru" data-scroll-behavior="smooth">
       <head>
